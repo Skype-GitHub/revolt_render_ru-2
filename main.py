@@ -17,7 +17,7 @@ class Client(revolt.Client):
         # "yd "を取り除いた後の部分が文字列として取得されます
         video_id = message[3:]
         # ここでqueryを使って適切な処理を行います
-        api_url = f'https://invidious.example/api/v1/videos/{video_id}'
+        api_url = f'https://invidious.fdn.fr/api/v1/videos/{video_id}'
         response = requests.get(api_url)
         data = response.json()
         video_url = data['formats'][0]['url']
