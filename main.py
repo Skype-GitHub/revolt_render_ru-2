@@ -8,7 +8,7 @@ import requests
 class Client(revolt.Client):
   
   async def on_ready(self):
-    print('Run  ルーレットBOT')
+    print('Run  videoBOT')
     
   async def on_message(self, message: revolt.Message):
     def receive_message(message):
