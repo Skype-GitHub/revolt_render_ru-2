@@ -21,7 +21,8 @@ class Client(revolt.Client):
         response = requests.get(api_url)
         data = response.json()
         video_url = data['formats'][0]['url']
-        message.channel.send(f"Video URL:{video_url}")
+        channel_id = "01HN0EX161E3JZ7TDY1SRRB2PM"
+        await client.send_message(channel_id, f"{video_id}")
 async def main():
   async with revolt.utils.client_session() as session:
     client = Client(session, os.environ['R'])
